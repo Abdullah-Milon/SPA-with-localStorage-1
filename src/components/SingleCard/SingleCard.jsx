@@ -1,19 +1,19 @@
 import React from 'react';
 
-const SingleCard = () => {
+const SingleCard = ({movie, handleWatchTime}) => {
 
     return (
         <div className="movie-card card text-center m-auto w-100">
             <div className="movie-poster w-25 m-auto">
-                <img className='w-75' src="https://c8.alamy.com/comp/C2WJYB/the-dark-knight-poster-display-at-the-arclight-theater-los-angeles-C2WJYB.jpg"/>
+                <img className='w-75' src={movie.poster}/>
             </div>
-            <h3></h3>
-            <p></p>
+            <h3>{movie.movieName}</h3>
+            <p>{movie.description}</p>
             <div className="time-rating d-flex justify-content-around">
-                <p>Watch Time:</p>
-                <p>Rating: </p>
+                <p>Watch Time: {movie.watchTime}</p>
+                <p>Rating: {movie.imdbRating}</p>
             </div>
-            <button className='btn btn-info w-50 m-auto'>Book now</button>
+            <button onClick={()=>handleWatchTime(movie.watchTime)} className='btn btn-info w-50 m-auto'>Book now</button>
         </div>
     );
 };

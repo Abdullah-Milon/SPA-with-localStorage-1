@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
-const SideCart = () => {
+const SideCart = ({watchTime}) => {
 
     return (
         <div className='side-cart'>
