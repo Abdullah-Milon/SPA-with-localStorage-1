@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
 const SideCart = ({watchTime}) => {
+    
+
+    useEffect( () =>{
+        const getWatchTimeFromStorage = localStorage.getItem('watchTime')
+        // console.log(getWatchTimeFromStorage)
+        
+    },[])
 
     return (
         <div className='side-cart'>
